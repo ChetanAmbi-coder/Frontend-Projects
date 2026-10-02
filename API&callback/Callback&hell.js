@@ -1,10 +1,31 @@
-function first(){
-    console.log("first it");
+function start( name, callback){
+    console.log("hello " + " " +name +  " " +"started");
+    callback();
+
 }
-function sec(){
-    first();
-    console.log("ended");
+function end(){
+    console.log("finished ambi");
+
 }
-sec();
-first();
-first();
+start("ambi", end);
+//Asynshromous with Callback
+console.log("started");
+setTimeout(() => {
+    console.log("data has fetched succesfully");
+
+ },  2000);
+console.log("ended");
+//Callback Hell//
+getusers(function(user){
+    console.log("Dear Chetan");
+    getorders(function(orders){
+          console.log("your order is placed");
+        getpayment(function(payemnt){
+              console.log("your payment is succesfull");
+            getdelivery(function(delivery){
+                  console.log("your order is out for delivery");
+
+            });
+        });
+    });
+});

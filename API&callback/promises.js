@@ -15,6 +15,7 @@ const promise = new Promise((resolve, reject) => {
     }
 
 });
+/*
 promise.then((result) => {
     console.log(result);
 
@@ -26,6 +27,15 @@ promise.then((result) => {
     console.log("finished");
 
 })
+    */
+async function getData(){
+    const result = await promise;
+    console.log(result);
+}
+    getData();
+
+
+
 //.then is use when the promise succeeds//
 //.catch  is use the promise for erros//
 //finally runs for whether the prmose is success or not but it runs alway//
